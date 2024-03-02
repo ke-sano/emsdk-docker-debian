@@ -21,8 +21,7 @@ RUN apt-get -q update && \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN export CFLAGS="-stdlib=libc++ -rtlib=compiler-rt -unwindlib=libunwind -fuse-ld=lld"
-ENV EMCC_CFLAGS="-stdlib=libc++ -rtlib=compiler-rt -unwindlib=libunwind -fuse-ld=lld"
+RUN export CFLAGS="-stdlib=libc++ -rtlib=compiler-rt -unwindlib=libunwind -fuse-ld=lld" EMCC_CFLAGS="-stdlib=libc++ -rtlib=compiler-rt -unwindlib=libunwind -fuse-ld=lld"
 
 RUN git clone -b 3.1.47 https://github.com/emscripten-core/emsdk.git && chmod +x emsdk && cd emsdk && \
     ./emsdk install 3.1.47 && \

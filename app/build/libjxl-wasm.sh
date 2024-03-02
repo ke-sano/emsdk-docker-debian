@@ -14,6 +14,8 @@ git clone -b v0.10.1 https://github.com/libjxl/libjxl.git --recursive --shallow-
 
 cd libjxl
 
+export EMCC_CFLAGS="-stdlib=libc++"
+
 BUILD_TARGET=wasm32 ENABLE_WASM_SIMD=1 emconfigure ./ci.sh release
 
 apt-get purge --auto-remove -y \
@@ -24,6 +26,3 @@ ninja-build \
 doxygen \
 graphviz \
 default-jre
-
-export CFLAGS="-stdlib=libc++ -rtlib=compiler-rt -unwindlib=libunwind -fuse-ld=lld" \
-       EMCC_CFLAGS="-stdlib=libc++ -rtlib=compiler-rt -unwindlib=libunwind -fuse-ld=lld"

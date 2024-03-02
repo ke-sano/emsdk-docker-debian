@@ -14,7 +14,7 @@ git clone -b v0.10.1 https://github.com/libjxl/libjxl.git --recursive --shallow-
 
 cd libjxl
 
-export EMCC_CFLAGS="-stdlib=libc++"
+export EMCC_CFLAGS=""
 
 BUILD_TARGET=wasm32 ENABLE_WASM_SIMD=1 emconfigure ./ci.sh release
 

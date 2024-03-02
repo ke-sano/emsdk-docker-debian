@@ -24,3 +24,6 @@ ninja-build \
 doxygen \
 graphviz \
 default-jre
+
+export CFLAGS="-stdlib=libc++ -rtlib=compiler-rt -unwindlib=libunwind -fuse-ld=lld" \
+       EMCC_CFLAGS="-stdlib=libc++ -rtlib=compiler-rt -unwindlib=libunwind -fuse-ld=lld"

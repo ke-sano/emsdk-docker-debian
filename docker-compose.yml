@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  emsdk:
+    container_name: emsdk-debian
+    tty: true
+    build: ./build/docker/emsdk
+    volumes:
+      - ./app:/app

@@ -2,8 +2,8 @@ FROM debian:stable-slim
 
 ENV DEBIAN_FRONTEND=noninteractive \
     DEBCONF_NONINTERACTIVE_SEEN=true \
-    CFLAGS="-std=c++98 -stdlib=libc++ -rtlib=compiler-rt -unwindlib=libunwind -fuse-ld=lld" \
-    EMCC_CFLAGS="-std=c++98 -stdlib=libc++ -rtlib=compiler-rt -unwindlib=libunwind -fuse-ld=lld"
+    CFLAGS="-std=c++14 -stdlib=libc++ -rtlib=compiler-rt -unwindlib=libunwind -fuse-ld=lld" \
+    EMCC_CFLAGS="-std=c++14 -stdlib=libc++ -rtlib=compiler-rt -unwindlib=libunwind -fuse-ld=lld"
 
 RUN apt-get -q update && \
     apt-get -q install -y --no-install-recommends \

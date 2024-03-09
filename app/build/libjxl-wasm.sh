@@ -10,7 +10,7 @@ default-jre \
 && apt-get clean \
 && rm -rf /var/lib/apt/lists/*
 
-git clone -b v0.10.1 https://github.com/libjxl/libjxl.git --recursive --shallow-submodules
+git clone -b v0.10.2 https://github.com/libjxl/libjxl.git --recursive --shallow-submodules
 
 cd libjxl
 
